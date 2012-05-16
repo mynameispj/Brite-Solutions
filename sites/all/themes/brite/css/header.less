@@ -1,0 +1,243 @@
+/*Header & Global Navigation elements*/
+
+a#brand {
+	.sprite-link('i/logo.png'); 
+	width: 203px; 
+	height: 46px;
+	margin-top: 15px; 
+	margin-right: 60px;
+	}
+		
+
+header, 
+article {
+	.clearfix(); 
+	}
+
+.ie8, 
+.ie7 {
+	header {
+		background: #ebebeb; 
+		filter: none; 
+	}
+}
+
+header {
+	.w-h(100%,85px);
+	border-bottom: 1px solid #7B7B7B;  
+	.headerGradient(); 
+	.dropShadow(0px 1px 3px 0px rgba(51, 51, 51, 0.3)); 
+	position: relative; 
+	z-index: 1000; 
+	
+	.content {
+		width: 1004px; 
+	}
+	nav {
+		.relative-float(left);
+	}	
+}
+
+.ie8, 
+.ie7 {
+	nav {
+		ul.nav-pills {
+			li {
+				a#quote {
+					.blueGradientHover(); 	
+				}	
+				&.dropdown.open a.dropdown-toggle {
+					background: @briteBlue;
+					filter: none; 
+				}
+			}
+		}
+	}
+}
+
+.ie {
+	nav {
+		ul.nav-pills {
+			li {
+				a {
+					filter: none; 
+				}
+			}
+		}
+	}
+}
+
+.ie7 {
+	nav {
+		ul.nav-pills {
+			li {
+				.quoteform {
+					form {
+						background-color: #fff; 
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+
+
+nav {
+	.relative-float(right);
+	ul.nav-pills {
+		li {
+			margin-top: 25px; 
+			
+			&#contact {
+				margin-right: 10px;
+				
+			}
+			
+			&#menu-quote {
+				margin-top: 15px;
+				margin-left: 10px;
+				&.open a#quote {
+					.border-radius(5px 5px 0px 0px);
+					border-bottom: none;
+				}
+			}
+			
+			a {
+				.border-radius(0px);
+				color: #7A7D7F; 
+				text-decoration: none;
+				.myriadPro();
+				text-transform: lowercase; 
+				font-size: 18px; 
+				.textShadow(0,1,0,#ffffff);  
+				
+			}
+			a:hover {
+				background: transparent; 
+				color: @briteBlue;
+			}
+			
+			&.dropdown.open a.dropdown-toggle {
+				.blueGradientHover();
+				.textShadow(0,1,0,#000000);	
+				border: 1px solid #0A497B; 
+				border-bottom: none; 
+				background-clip: padding-box; 
+				color: #fff; 
+				.border-radius(5px 5px 0 0);
+				margin-bottom: 0; 
+				padding-left: 11px; 
+				padding-right: 11px; 
+			}
+			
+			a#quote {
+				.blueGradient(); 
+				color: #fff; 
+				.textShadow(0,1,0,#000000);	
+				border: 1px solid #0A497B; 
+				border-bottom: 2px solid #000; 
+				background-clip: padding-box; 
+				height: 30px; 
+				width: 108px; 
+				text-align: center; 
+				line-height: 30px;
+				font-size: 22px;
+				.border-radius(5px);
+				display: block; 
+				cursor: pointer; 
+			} 	
+
+			a#quote:hover {
+				.blueGradientHover(); 
+			}
+			.caret {
+				.w-h(7px,6px); 
+				.sprite-link('i/caret.png'); 
+				display: inline-block;
+				vertical-align: middle;
+				float: none;
+				margin-left: 5px;
+			}
+			.caret.over {
+				background-position: -7px top; 	
+			}
+			.quoteform {
+				position: absolute; 
+				z-index: 50; 
+				background: @briteBlueDarker; 
+				width: 510px; 
+				margin: -4px 0 0 -388px; 
+				display: none;  
+				.border-radius(6px 0px 6px 6px);
+				border: 1px solid #000; 
+				border-top: none; 
+				padding: 6px 5px 7px;
+				.dropShadow(0px 1px 2px rgba(0,0,0,0.65)); 
+				form {
+					.background-img('i/noise.gif'); 
+					.border-radius(5px);
+					margin-bottom: 0; 
+					padding-top: 18px;
+					
+					input{
+						width: 326px;
+					}
+					textarea {
+						width: 336px; 
+					}
+					
+				}
+				
+				.btn {
+					width: 100%;
+				}
+				.form-actions {
+					 .border-radius(0 0 5px 5px);
+					 margin-bottom: 0; 
+				}
+				
+				#webform-component-please-describe-what-other-services-you-are-interested-in {
+					display: none; 
+				}
+				
+			}
+			.dropdown-menu {
+				background: @briteBlueDarker; 
+				padding: 6px 5px 7px;
+				.border-radius(0 6px 6px 6px);	
+				border: 1px solid #000; 
+				border-top: none;
+				margin-top: 0; 
+				width: 250px; 
+				li {
+					background: #fff url(i/noise.gif); 
+					margin-bottom: 0; 
+					margin-top: 0px; 
+					&.first {
+						.border-radius(5px 5px 0 0);
+					}
+					&.last {
+						.border-radius(0 0 5px 5px);
+					}
+					a {
+						font-size: 15px; 
+						line-height: 15px;
+						padding-top: 10px; 
+						padding-bottom: 12px;
+					}
+					a:hover {
+						background: @briteBlueDarker;
+						color: #fff; 
+						.textShadow(0,1,0,#000000);	
+					}
+				}			
+			}
+			.quoteform legend {
+				text-align: center; 
+			}
+
+		}	
+	}
+}

@@ -1,0 +1,234 @@
+.title {
+	.clearfix(); 
+	.center; 
+	.w-h(1002px,242px);
+	padding: 0 10px 10px; 
+	background: @briteLightGray;
+	border: 1px solid darken(@briteLightGray,20%);
+	border-top: none;
+	.dropShadow(0 1px 0 0 rgba(0,0,0,0.6));
+	.border-radius(0 0 7px 7px); 
+	
+	.wrap {
+		.w-h(100%,100%);
+		position: relative; 
+		.border-radius(0 0 5px 5px);
+		border: 1px solid darken(@briteLightGray,40%);
+		border-top: none;
+		border-bottom: 1px solid darken(@briteLightGray,60%);	
+		.dropShadow(inset 0px -2px 6px 0px rgba(0, 0, 0, 0.2));	
+		
+		img {
+			display: none; 	
+		}
+		
+		&.contact {
+			img {
+				display: block;
+			}
+		}
+		
+		h1 {
+			position: absolute;
+    		bottom: 68px; 
+    		z-index: 800; 
+    		.myriadPro(); 
+    		.textShadow(0,1,0,#000000);	
+    		font-size: 36px; 
+    		font-weight: 600;
+    		color: #fff;
+    		background: @briteBlue; 
+			background: fade(@briteBlue,80%);
+			border: 1px solid darken(@briteBlue, 20%); 
+			border-left: none; 
+			.border-radius(0 5px 5px 0);
+			padding: 16px 26px 20px 17px; 
+		}
+		
+	}
+	
+}
+
+.ie7 .content #subNav h2 {
+	padding-left: 20px;
+}
+
+.content {
+	#main, 
+	.vendorApp {
+		.relative-float(left);
+		width: 55.46%; 
+		margin: 28px 0 0 30px; 
+		 
+	}
+	
+	#main {
+		.messages {
+			padding-left: 45px;
+			
+			h1, 
+			p {
+				.myriadPro(); 
+				color: @briteGreen; 
+				font-weight: normal; 
+
+			}
+			
+			h1 {
+				font-size: 30px;
+			}
+		
+		}
+	
+	}
+	
+	
+	#subNav {
+		width: 236px; 
+		padding: 0 20px 30px 21px;
+		background: transparent url(i/subnav-bottom.png) no-repeat center bottom ; 
+		margin-top: -54px;
+		h2 {
+			background: transparent url(i/subnav-top.png) no-repeat center top ; 
+			padding: 25px 0 0 34px; 
+			height: 50px;
+			.myriadPro(); 
+			.textShadow(0,1,0,#000000);	
+			color: #fff;
+			font-weight: 600;
+			font-size: 15px;
+			line-height: normal; 
+			text-transform: lowercase; 
+		}
+		
+		ul {
+			background: #fff url(i/subnav-fill.png); 
+			margin: 0; 
+			
+			li {
+				list-style: none; 
+				margin: 0 0 0 14px; 
+				
+				&.leaf {
+					list-style: none; 
+					list-style-image: none; 
+					background: transparent; 
+				}
+				
+				a {
+					padding: 10px 0 8px 15px; 
+					width: 193px; 
+					display: block; 
+					.myriadPro(); 
+					color: darken(@briteLightGray, 40%); 
+					.textShadow(0,1,0,#ffffff);
+					text-decoration: none; 
+				}
+				
+				a:hover {
+					.subNavLinkHover();
+				}
+				
+				&.active {
+					a {
+						.subNavLinkHover();
+					}
+				}				
+			}
+		}		
+	}
+}
+
+.subNavLinkHover() {
+	background: @briteBlue; 
+	display: block; 
+	.textShadow(0,1,0,#000000);	
+	color: #fff; 
+}
+
+.page-node-7 { /*The vendor application form page */
+	article {
+		.webform-client-form {
+		
+			.control-group {
+			
+				&#webform-component-your-name, 
+				&#webform-component-email-address,
+				&#webform-component-phone-number,
+				&#webform-component-company-name,
+				&#webform-component-trade,
+				&#webform-component-trade-specialty, 
+				&#webform-component-please-provide-a-reference--reference-name,
+				&#webform-component-please-provide-a-reference--reference-email, 
+				&#webform-component-please-provide-a-reference--reference-phone,
+				&#webform-component-please-provide-a-reference--reference-title {
+					float: left; 
+					width: 50%; 
+				}
+			
+				label {
+					text-align: left; 
+					width: auto; 
+				}
+				.controls,
+				.form-textarea-wrapper {
+					margin-left: 0; 
+					clear: left; 
+				}
+				
+				.form-type-checkbox {
+					clear: left; 
+					.controls {
+						float: left; 
+						margin-right: 10px;
+					}
+				}
+				
+			}
+			
+			.form-actions {
+				margin-top: 0; 
+			}
+			
+			.form-submit {
+				width: 100%;
+			}
+		}
+	}
+}
+
+html.js {
+
+	fieldset.collapsed, 
+	fieldset.collapsible {
+		
+		height: auto; 
+		.clearfix(); 
+		margin-top: 40px;
+	
+		legend {
+			border-bottom: 0; 
+			margin-bottom: none; 
+			
+			.fieldset-legend {
+				font-size: 14px; 
+				.myriadPro(); 
+				background-color: @briteLightGray; 
+				.border-radius(5px 5px 0 0);
+				width: 200px; 
+				a {
+					color: darken(@briteLightGray,40%);
+				}
+				a:hover {
+					color: darken(@briteLightGray,70%);
+				}
+			}
+		}	
+		
+		.fieldset-wrapper {
+			background-color: @briteLightGray;  
+			padding: 10px; 
+		}
+		
+	}
+}

@@ -1,0 +1,38 @@
+; $Id: brite.info $
+name = Brite Solutions CMS
+description = CMS to aid in loading content to the Brite Solutions web site; not intended for client use
+package = Core
+version = VERSION
+core = 7.x
+
+screenshot = screenshot.png
+
+settings[shortcut_module_link] = 1
+
+regions[sidebar_first]  = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[page_top] = Page Top
+regions[page_bottom] = Page Bottom
+regions[vendorApp] = Vendor Application
+regions[contactForm] = Contact Form
+regions[subNav] = Sub Navigation
+regions[footerMenu] = Footer Menu
+
+stylesheets[screen][] = css/style.css
+
+scripts[] = js/modernizr-1.7.min.js
+scripts[] = js/bootstrap-dropdown.js
+scripts[] = js/jquery.carousel.js
+scripts[] = js/functions.js
+
+
+; Information added by drupal.org packaging script on 2011-01-05
+version = "7.0"
+project = "drupal"
+datestamp = "1294208756"
+

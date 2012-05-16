@@ -1,0 +1,246 @@
+@import "bootstrap.less"; 
+
+.background-img (@imgURL, @x: left, @y: top, @bgrepeat: repeat) {
+	background: transparent url(@imgURL) @x @y @bgrepeat;
+	}
+
+.dropshadow() {
+	-webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+	box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+	}
+
+.h-w(@width,@height) {
+	width: @width; 
+	height: @height; 
+	}
+
+.relative-float(@float: none) {
+	position: relative; 
+	float: @float;
+	}
+
+.sprite-link (@imgURL) {
+	display: block; 
+	.background-img(@imgURL); 
+	text-indent: -9999px; 
+	.relative-float(left); 	
+	}
+	
+.center {
+	display: block; 
+	margin: 0 auto; 
+	float: none; 
+	}	
+
+a#brand {
+	.sprite-link('_/css/i/brite-logo.png'); 
+	width: 269px; 
+	height: 62px; 
+	}
+
+html, body {
+	height: 100%;
+	}
+
+body#front {
+	.background-img('_/css/i/bg-large-img.jpg',center,top,no-repeat); 
+	}
+
+.wrapper { 
+	width: 1024px; 
+	.center; 
+	.clearfix();
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+	}
+
+p {
+	margin-bottom: 1em; 
+	}
+
+	.modal h3 {
+		font-size: 18px; 
+		}
+
+/* Navigation / Menu
+-------------------------------------------------------------------------------*/
+
+
+header, 
+article {
+	.clearfix(); 
+	}
+
+header {
+	padding-top: 10px; 
+	}
+
+nav {
+	.relative-float(right); 	
+	}
+	
+.nav-pills > li > a {
+	color: #000; 
+	text-decoration: none;
+	font-weight: bold;  
+	}	
+	
+.help {
+	.alert; 
+	.alert-success; 
+	position: absolute;
+	right: 0; 
+	top: 0; 
+	padding: 4px 7px;
+	border-radius: 65px;
+	margin-top: -10px; 
+	cursor: pointer; 
+	font-size: 14px; 
+	line-height: normal; 
+	font-weight: bold; 
+	}
+	
+	
+	.quoteform {
+		position: absolute; 
+		z-index: 50; 
+		background: #fff; 
+		width: 510px; 
+		margin-left: -250px;
+		display: none;  
+		border-radius: 5px;
+		border: 1px solid black;
+		.dropshadow(); 
+		}
+
+	.quoteform legend {
+		text-align: center; 
+		}
+
+
+/* Typography
+-------------------------------------------------------------------------------*/
+
+h1 {
+	font-size: 42px; 
+	}	
+	
+	.welcome h1 {
+		font-size: 30px;
+		}
+	
+	p.lead {
+		font-size: 24px;
+		}	
+
+	
+/* Main Content
+-------------------------------------------------------------------------------*/
+	
+.welcome {
+	width: 60%; 
+	.relative-float(right); 	
+	line-height: 45px;
+	background: rgba(255, 255, 255, 0.7);
+	padding: 10px 18px;
+	border-radius: 5px;
+	border: white;
+	margin: 50px 0; 
+	}	
+
+article {
+	padding-top: 30px; 
+	}
+
+.main {
+	.relative-float(right); 
+	width: 75%; 
+	margin-bottom: 50px; 
+	}
+	
+	.main ul {
+		margin-bottom: 1em; 
+		list-style: outside disc; 
+		}
+	
+		.main ul li {
+			padding-bottom: 5px; 
+			}
+	
+blockquote.pull-right {
+	border-right: none;
+	border-left: 5px solid #EEE;
+	padding-left: 15px;
+	margin-left: 15px; 
+	position: relative; 
+	}
+	
+.sub {
+	.relative-float(left); 
+	width: 20%; 
+	}
+	
+img {
+	.relative-float(left); 
+	padding: 0 10px 10px 0; 
+	}		
+	
+/* Footer
+-------------------------------------------------------------------------------*/
+	
+footer, .push {
+	height: 142px; /* .push must be the same height as .footer */
+	}	
+	
+footer {	
+	.clearfix();
+	width: 100%; 
+	background: #000; 
+	color: #fff; 
+	} 	
+	
+	footer .content {
+		.center; 
+		width: 1024px; 
+		padding-top: 20px; 
+		position: relative; 
+		}
+	
+	footer address, 
+	footer address span {
+		.relative-float(left); 
+		}
+		
+	footer address {
+		font-style: normal; 
+		padding-bottom: 20px; 
+		}	
+		
+		footer address span {
+			width: 200px;
+			margin-right: 10px;  
+			}
+			
+	footer ul {
+		position: relative; 
+		.clearfix(); 
+		}		
+
+	footer ul li {
+		.relative-float(left);  
+		border-right: 1px solid #fff; 
+		.h-w(80px,45px); 
+		padding-left: 10px; 
+		}
+		
+		footer ul li.last {
+			border-right: none; 
+			}
+	
+		footer ul li a{
+			color: #fff; 
+			}
+			

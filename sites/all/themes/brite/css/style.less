@@ -1,0 +1,306 @@
+@import "reset.css";
+@import "less/bootstrap.less"; 
+@import "effects.less";
+
+
+/* Brand Settings 
+-------------------------------------------------------------------------------*/
+@briteBlue: #1468AF;
+@briteBlueDarker: #1466ac;
+@briteGreen: #00774E; 
+@briteOrange: #B85D26; 
+@britePurple: #57215F; 
+@briteLightGray: #E7E7E7; 
+@footerTan: #606165; 
+@import 'brand.less'; 
+
+
+/* Utility Declarations 
+-------------------------------------------------------------------------------*/
+
+.hide-text() {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.hide-text-button() {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 0px;
+	line-height: 0;
+	cursor: pointer; 
+	display: block; 
+}
+
+.background-img (@imgURL, @x: left, @y: top, @bgrepeat: repeat) {
+	background: transparent url(@imgURL) @x @y @bgrepeat;
+	}
+
+.w-h(@width,@height) {
+	width: @width; 
+	height: @height; 
+	}
+
+.relative-float(@float: none) {
+	position: relative; 
+	float: @float;
+	}
+
+.sprite-link (@imgURL) {
+	display: block; 
+	.background-img(@imgURL); 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	.relative-float(left); 	
+	}
+	
+.center {
+	display: block; 
+	margin: 0 auto; 
+	float: none; 
+	}	
+
+html, body {
+	height: 100%;
+	}
+
+.wrapper { 
+	.w-h(100%,100%);
+	.center; 
+	.clearfix();
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -328px; /* the bottom margin is the negative value of the footer's height */
+	}
+
+p,
+address {
+	margin-bottom: 1em; 
+	.myriadPro(); 
+	font-weight: normal; 
+	font-size: 15px; 
+	color: darken(@briteLightGray, 40%); 
+	line-height: 146%;
+	
+	&.lead {
+		color: darken(@briteLightGray, 60%); 
+		font-size: 18px; 
+		
+	}
+	
+}
+
+.content {
+	width: 1024px; 
+	.center; 
+	.clearfix();
+}
+
+#admin-menu, 
+#admin-menu ul {
+	z-index: 1100; 
+}
+
+article {
+	z-index: 10; 
+	position: relative; 
+}
+
+
+/* Navigation / Menu
+-------------------------------------------------------------------------------*/
+@import 'header.less'; 
+
+
+/* Typography
+-------------------------------------------------------------------------------*/
+@import 'typography.less'; 
+
+
+/* Main Content
+-------------------------------------------------------------------------------*/
+
+.backdrop {
+	position: relative; 
+	
+	img.backdrop {
+		width: 100%;  
+		position: absolute; 
+		top: -5%; 
+		z-index: 0; 
+	}
+}
+	
+.welcome {
+	.w-h(100%,159px);
+	padding-top: 36px;
+	background: transparent url(i/bg-home-banner.png) repeat-x; 
+	margin-top: 210px;
+	.relative-float(left);
+	z-index: 100;
+	h1 {
+		float: left;
+		.myriadPro(); 
+		color: #fff; 
+		font-weight: normal; 
+		span {
+			display: block; 
+			clear: left; 
+			.textShadow(0,1,0,#000000);	
+			text-transform: lowercase; 
+			&.xsmall {
+				font-size: 16px;
+				line-height: 20px;
+			}
+			&.small {
+				font-size: 18px; 
+				line-height: 36px;
+			}
+			&.large {
+				width: 400px; 
+				font-size: 36px;
+				font-weight: 600; 
+				line-height: 33px;				
+			}
+		}
+	
+	}
+	
+	#specialties {
+		.w-h(448px,120px);
+		.relative-float(left);	
+		margin-left: 45px; 
+		ul {	    
+		    li {
+		    	.w-h(128px,120px);
+		    	position: relative;
+		    	margin: 0 8px 4px;
+		    	border: 1px solid #002037; 
+		    	.border-radius(5px);
+		    	background-clip: padding-box;
+		    	.dropShadow(0 1px 3px rgba(0,0,0,0.82)); 
+		    	overflow: hidden; 
+		    	a {
+		    		display: block; 
+		    		overflow: hidden; 
+		    		.w-h(100%,100%);
+			    	.border-radius(5px);
+			    	position: relative; 
+			    	text-decoration: none; 
+			    	h2 {
+			    		position: absolute;
+			    		bottom: 0; 
+			    		text-transform: lowercase;  
+			    		z-index: 1000; 
+			    		.myriadPro(); 
+			    		.textShadow(0,1,0,#000000);	
+			    		font-size: 14px; 
+			    		font-weight: 600;
+			    		color: #fff;
+			    		width: 100%;
+			    		.border-radius(0 0 4px 4px);
+			    		text-indent: 9px;
+			    	}
+			    	img {
+			    		.border-radius(5px);
+			    		display: block; 
+			    	}
+
+		    	}
+		    	&.orange a h2 {
+		    		background: @briteOrange;
+		    		background: fade(@briteOrange,80%)
+		    	}
+		    	&.orange a:hover h2 {
+		    		background: @briteOrange;
+		    	}		    	
+		    	&.blue a h2 {
+		    		background: @briteBlue;
+		    		background: fade(@briteBlue,80%)
+		    	}
+		    	&.blue a:hover h2 {
+		    		background: @briteBlue;
+		    	}
+		    	
+		    	&.green a h2 {
+		    		background: @briteGreen;
+		    		background: fade(@briteGreen,80%);		    	
+		    	}
+		    	&.green a:hover h2 {
+		    		background: @briteGreen;
+		    	}
+		    	
+		    	&.purple a h2 {
+		    		background: @britePurple;
+		    		background: fade(@britePurple,80%)
+		    	}
+		    	&.purple a:hover h2 {
+		    		background: @britePurple;
+		    	}		    			  
+		    }
+		}
+		
+		button {
+			width: 18px; 
+			height: 27px;
+			border: none;  
+			background: transparent url(i/slider-nav.png); 	
+			.hide-text-button(); 
+			border: none;
+			position: absolute; 
+			left: -20px; 
+			top: 45px; 
+			&.next {
+				background-position: -18px top;
+				left: 585px;
+			}
+		}
+		button:hover {
+			background-position: left -27px;
+			&.next {
+				background-position: -18px -27px;
+			}
+		}
+	}	
+}
+
+	
+.sub {
+	.relative-float(left); 
+	width: 20%; 
+	}
+	
+img {
+	.relative-float(left); 
+	padding: 0 10px 10px 0; 
+	}		
+
+/* Interior content pages */	
+	
+@import 'interior.less'; 	
+	
+	
+/* Contact Page
+-------------------------------------------------------------------------------*/
+@import 'contact.less'; 
+	
+
+	
+	
+/* Footer
+-------------------------------------------------------------------------------*/
+@import 'footer.less'; 
+
+
+/* Media Queries
+-------------------------------------------------------------------------------*/
+
+@import 'mediaqueries.less'; 
+
+#overlay-container {
+	z-index: 1500;
+}

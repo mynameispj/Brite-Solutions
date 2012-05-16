@@ -1,0 +1,21 @@
+h1 {
+  font-size: 42px;
+}
+.welcome h1 {
+  font-size: 30px;
+}
+p.lead {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "myriad-pro", "helvetica neue", helvetica, arial, sans-serif;
+}
+h2,
+strong {
+  font-family: "myriad-pro", "helvetica neue", helvetica, arial, sans-serif;
+}
+h2 {
+  font-size: 30px;
+}
+#main h2 {
+  margin-bottom: 10px;
+}

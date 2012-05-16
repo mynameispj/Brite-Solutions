@@ -1,0 +1,137 @@
+	
+footer, .push {
+	height: 428px; /* .push must be the same height as .footer */
+	}	
+.ie7 footer .content .membership ul li {
+	float: left; 
+}
+	
+footer {	
+	.clearfix();
+	width: 100%; 
+	background: @footerTan url(i/bg-footer.jpg) repeat-x; 
+	.myriadPro(); 
+	z-index: 100;
+	position: relative; 
+	.content {
+		.center; 
+		width: 1024px; 
+		background: transparent url(i/footer-shadow.png) center 52px no-repeat; 
+		position: relative; 
+		padding: 20px 100px 0;	
+		
+		h3, 
+		.phone {
+			font-weight: normal; 
+			color: darken(@footerTan, 20%);
+			.textShadow(0,1px,0px,rgba(255,255,255,0.3));
+			text-transform: lowercase; 
+			font-size: 18px;
+			margin-bottom: 10px;
+			position: absolute; 
+		}
+		
+		.phone {
+			text-transform: none;
+			.relative-float(right);
+		}
+		
+		h3 {
+			line-height: normal;
+			left: 102px;
+			top: 20px; 
+		}
+		
+		address {
+			.relative-float(left);
+			clear: left;  
+			width: 428px; 
+			padding-top: 241px; 
+			background: transparent url(i/footer-map.png) no-repeat; 
+			margin-top: 33px;
+			
+			span {
+				.relative-float(left);
+				margin-right: 18px; 
+				margin-top: 9px;
+				font-style: normal;  
+				color: darken(@footerTan, 50%);
+				.textShadow(0,1px,0px,rgba(255,255,255,0.2));
+				
+			}
+		}
+		
+		ul {
+			.relative-float(left);
+			padding-top: 18px;
+			margin-left: 0; 
+			margin-right: 18px;
+			
+			&.menu {
+				margin-left: 20px;
+				width: 530px;
+				
+				li {
+					margin-left: 0;
+				}
+			}
+			
+			li {
+				list-style: none; 
+				display: inline;
+				margin-right: 11px;
+				&.last {
+					margin-right: 0; 
+				}
+
+				a {
+					color: darken(@footerTan, 20%);
+					.textShadow(0,1px,0px,rgba(255,255,255,0.3));
+					text-decoration: none; 
+					border: none;
+					text-transform: lowercase; 
+				}
+				a:hover {
+					color: darken(@footerTan, 50%);
+				}
+			}
+		}
+		.membership {
+			.relative-float(right);
+			width: 575px; 
+			.myriadPro(); 
+			.textShadow(0,1px,0px,rgba(255,255,255,0.2));
+			text-transform: lowercase;
+			margin-top: 76px;
+			p {
+				margin-bottom: 9px;
+				color: darken(@footerTan, 20%);
+			}
+			ul {
+				background: #515152; 
+				margin: 0;
+				padding: 15px 15px 17px;
+				border: 1px solid darken(@footerTan, 10%);
+				border-bottom: 1px solid lighten(@footerTan,04%);
+				.border-radius(5px);
+				li {
+					display: inline-block; 
+					vertical-align: middle; 
+					img {
+						padding: 0;
+					}
+				}
+			}
+		}
+		
+		p small {
+			.relative-float(left);
+			clear: left; 
+			color: darken(@footerTan, 50%);
+			.textShadow(0,1px,0px,rgba(255,255,255,0.2));
+		}
+	}
+	
+} 	
+
+
